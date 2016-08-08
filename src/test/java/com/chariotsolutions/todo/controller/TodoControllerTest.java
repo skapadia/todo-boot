@@ -1,6 +1,7 @@
-package com.chariotsolutions.todo.app;
+package com.chariotsolutions.todo.controller;
 
 
+import com.chariotsolutions.todo.controller.TodoController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
