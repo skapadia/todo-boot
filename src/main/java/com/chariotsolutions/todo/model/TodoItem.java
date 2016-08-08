@@ -1,6 +1,7 @@
 package com.chariotsolutions.todo.model;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,6 +20,8 @@ public class TodoItem {
     private String id;
     @Field("description")
     private String description;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     @Field("dueDateTime")
     private LocalDateTime dueDateTime;
 

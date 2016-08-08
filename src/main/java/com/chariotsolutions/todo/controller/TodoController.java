@@ -23,7 +23,7 @@ public class TodoController {
     private TodoItemRepository itemRepo;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String index() { 
+    public String index() {
         logger.debug("Todo item index endpoint invoked.");
         return "My first Spring Boot based microservice!";
     }
