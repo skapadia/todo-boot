@@ -25,9 +25,9 @@ public class TodoItem {
     public TodoItem() {}
 
     @PersistenceConstructor
-    public TodoItem(String desc, LocalDateTime due) {
-        this.description = desc;
-        this.dueDateTime = due;
+    public TodoItem(String description, LocalDateTime dueDateTime) {
+        this.description = description;
+        this.dueDateTime = dueDateTime;
     }
 
     @Override
