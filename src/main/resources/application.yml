@@ -1,0 +1,8 @@
+logging:
+  file: logs/todo-app.log
+
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+      write_dates_as_timestamps: false
