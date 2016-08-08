@@ -32,7 +32,7 @@ public class TodoControllerTest {
 
     @Test
     public void getRoot() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.get("/todo").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("My first Spring Boot based microservice!")));
 

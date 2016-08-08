@@ -30,6 +30,18 @@ public class TodoItem {
         this.dueDateTime = dueDateTime;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public LocalDateTime getDueDateTime() {
+        return dueDateTime;
+    }
+
     @Override
     public String toString() {
         return String.format(
