@@ -21,7 +21,6 @@ public class TodoItem {
     @Field("description")
     private String description;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     @Field("dueDateTime")
     private LocalDateTime dueDateTime;
 
