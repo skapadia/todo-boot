@@ -5,8 +5,10 @@ iteratively adding the following:
 - Spring Web MVC
 - Jetty
 - Spring Boot Test / JUnit
+- Spring Data + MongoDB
 - Logback
 - Actuator
-- Spring Data + MongoDB
+- Spring Security
+- Dropwizard Metrics
 - Swagger
 - More
