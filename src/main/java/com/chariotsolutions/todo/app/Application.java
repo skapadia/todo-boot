@@ -24,7 +24,6 @@ import java.util.Arrays;
 
 @SpringBootApplication(scanBasePackages = "com.chariotsolutions")
 @EnableMongoRepositories(basePackages="com.chariotsolutions.todo.repository")
-@Import(JmxAutoConfiguration.class)
 public class Application implements CommandLineRunner {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
