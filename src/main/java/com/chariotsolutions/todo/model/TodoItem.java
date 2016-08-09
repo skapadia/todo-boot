@@ -2,6 +2,7 @@ package com.chariotsolutions.todo.model;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -32,14 +33,17 @@ public class TodoItem {
         this.dueDateTime = dueDateTime;
     }
 
+    @ApiModelProperty(notes = "The id of the todo item", required = true)
     public String getId() {
         return id;
     }
 
+    @ApiModelProperty(notes = "The description of the todo item", required = true)
     public String getDescription() {
         return description;
     }
 
+    @ApiModelProperty(notes = "The due date time of the todo item", required = true)
     public LocalDateTime getDueDateTime() {
         return dueDateTime;
     }
