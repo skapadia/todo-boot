@@ -23,6 +23,7 @@ endpoints:
     sensitive: false
     time-to-live: 1000
 
+
 management:
   port: 8081
   address: 127.0.0.1
