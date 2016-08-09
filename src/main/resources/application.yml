@@ -10,3 +10,7 @@ spring:
     serialization:
       indent_output: true
       write_dates_as_timestamps: false
+
+endpoints:
+  shutdown:
+    enabled: true
