@@ -10,6 +10,10 @@ spring:
     serialization:
       indent_output: true
       write_dates_as_timestamps: false
+  devtools:
+    restart:
+      additional-paths:
+      additional-exclude:
 
 endpoints:
   shutdown:
