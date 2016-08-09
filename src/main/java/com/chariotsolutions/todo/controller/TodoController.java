@@ -34,7 +34,7 @@ public class TodoController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<TodoItem> findAll() {
-        counter.increment("controller.todo.list.requests.count");
+        counter.increment("controller.todo.list.requests");
         return itemRepo.findAll();
     }
 }

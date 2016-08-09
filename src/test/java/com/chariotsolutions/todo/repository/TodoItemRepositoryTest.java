@@ -3,6 +3,7 @@ package com.chariotsolutions.todo.repository;
 import com.chariotsolutions.todo.app.Application;
 import com.chariotsolutions.todo.model.TodoItem;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
+@Ignore
 public class TodoItemRepositoryTest {
 
     @Autowired

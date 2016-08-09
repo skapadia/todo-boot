@@ -12,8 +12,10 @@ import org.springframework.boot.actuate.autoconfigure.ExportMetricWriter;
 import org.springframework.boot.actuate.metrics.jmx.JmxMetricWriter;
 import org.springframework.boot.actuate.metrics.writer.MetricWriter;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.jmx.export.MBeanExporter;
 
@@ -22,6 +24,7 @@ import java.util.Arrays;
 
 @SpringBootApplication(scanBasePackages = "com.chariotsolutions")
 @EnableMongoRepositories(basePackages="com.chariotsolutions.todo.repository")
+@Import(JmxAutoConfiguration.class)
 public class Application implements CommandLineRunner {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 

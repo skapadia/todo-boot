@@ -29,6 +29,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>${dropwizard.metrics.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver</artifactId>
             <version>${mongodb.version}</version>
@@ -97,6 +102,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.integration</groupId>-->
+            <!--<artifactId>spring-integration-jmx</artifactId>-->
+            <!--<version>4.3.1.RELEASE</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
@@ -194,6 +204,7 @@
         <logback.version>1.1.7</logback.version>
         <jetty.version>9.3.11.v20160721</jetty.version>
         <mongodb.version>3.2.2</mongodb.version>
+        <dropwizard.metrics.version>3.1.0</dropwizard.metrics.version>
 
         <java.version>1.8</java.version>
         <resource.delimiter>@</resource.delimiter> <!-- delimiter that doesn't clash with Spring ${} placeholders -->
