@@ -14,3 +14,6 @@ spring:
 endpoints:
   shutdown:
     enabled: true
+  health:
+    sensitive: false
+    time-to-live: 1000
