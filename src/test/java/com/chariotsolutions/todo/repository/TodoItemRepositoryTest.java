@@ -15,7 +15,6 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
-@Ignore
 public class TodoItemRepositoryTest {
 
     @Autowired

@@ -31,11 +31,6 @@ public class Application implements CommandLineRunner {
     @Autowired
     private TodoItemRepository todoItemsRepository;
 
-    @Bean
-    @ExportMetricWriter
-    MetricWriter metricWriter(MBeanExporter exporter) {
-        return new JmxMetricWriter(exporter);
-    }
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
