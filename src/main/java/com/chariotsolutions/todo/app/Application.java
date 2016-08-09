@@ -61,6 +61,7 @@ public class Application implements CommandLineRunner {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("todo")
                 .apiInfo(apiInfo())
+                .directModelSubstitute(LocalDateTime.class, java.util.Date.class)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.chariotsolutions.todo.controller"))
                 .paths(PathSelectors.any())
@@ -70,8 +71,8 @@ public class Application implements CommandLineRunner {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Todo Item Spring Boot Microservice")
-                .description("Todo Item Spring Boot Microservice")
+                .title("Todo Item API")
+                .description("Todo Item API")
                 .version("0.0.1")
                 .build();
     }

@@ -3,10 +3,8 @@ package com.chariotsolutions.todo.controller;
 
 import com.chariotsolutions.todo.model.TodoItem;
 import com.chariotsolutions.todo.repository.TodoItemRepository;
-import com.codahale.metrics.Counter;
 import com.codahale.metrics.Meter;
 import com.codahale.metrics.MetricRegistry;
-import com.sun.tools.javac.comp.Todo;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;

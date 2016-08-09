@@ -43,7 +43,8 @@ public class TodoItem {
         return description;
     }
 
-    @ApiModelProperty(notes = "The due date time of the todo item", required = true)
+    @ApiModelProperty(notes = "The due date time of the todo item", required = true,
+            example = "2016-08-09T12:00:00.000")
     public LocalDateTime getDueDateTime() {
         return dueDateTime;
     }
