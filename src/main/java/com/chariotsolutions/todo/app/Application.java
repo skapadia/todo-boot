@@ -3,6 +3,7 @@ package com.chariotsolutions.todo.app;
 
 import com.chariotsolutions.todo.model.TodoItem;
 import com.chariotsolutions.todo.repository.TodoItemRepository;
+import com.codahale.metrics.MetricRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,8 @@ public class Application implements CommandLineRunner {
     @Autowired
     private TodoItemRepository todoItemsRepository;
 
+    @Autowired
+    private MetricRegistry metricRegistry;
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
