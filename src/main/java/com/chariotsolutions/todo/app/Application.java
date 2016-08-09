@@ -8,9 +8,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.autoconfigure.ExportMetricWriter;
+import org.springframework.boot.actuate.metrics.jmx.JmxMetricWriter;
+import org.springframework.boot.actuate.metrics.writer.MetricWriter;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.jmx.export.MBeanExporter;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -22,6 +27,12 @@ public class Application implements CommandLineRunner {
 
     @Autowired
     private TodoItemRepository todoItemsRepository;
+
+    @Bean
+    @ExportMetricWriter
+    MetricWriter metricWriter(MBeanExporter exporter) {
+        return new JmxMetricWriter(exporter);
+    }
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
