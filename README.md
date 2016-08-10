@@ -10,5 +10,5 @@ iteratively adding the following:
 - Actuator
 - Spring Security
 - Dropwizard Metrics
-- Swagger
+- Swagger 2 + Springfox
 - More
