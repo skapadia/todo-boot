@@ -5,7 +5,7 @@ iteratively adding the following:
 - Spring Boot
 - Spring Web MVC
 - Jetty
-- Spring Boot Test / JUnit
+- Spring Boot Test / JUnit / Mockito
 - Spring Data + MongoDB
 - Logback
 - Actuator
