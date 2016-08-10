@@ -12,4 +12,5 @@ iteratively adding the following:
 - Spring Security
 - Dropwizard Metrics
 - Swagger 2 + Springfox
+- ? Mongeez for Mongodb migrations / seeding data ?
 - More
