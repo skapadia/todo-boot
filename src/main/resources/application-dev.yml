@@ -2,14 +2,12 @@ logging:
   file: logs/todo-app.log
 
 spring:
-  profiles:
-    active: dev
   data:
     mongodb:
-  jackson:
-    serialization:
-      indent_output: true
-      write_dates_as_timestamps: false
+      host: localhost
+      port: 27017
+      database: dev
+
   devtools:
     restart:
       enabled: true
@@ -18,9 +16,9 @@ spring:
 
 endpoints:
   shutdown:
-    enabled: false
+    enabled: true
   health:
-    sensitive: true
+    sensitive: false
     time-to-live: 1000
 
 
@@ -28,4 +26,4 @@ management:
   port: 8081
   address: 127.0.0.1
   security:
-    enabled: true
+    enabled: false
