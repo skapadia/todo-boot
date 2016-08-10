@@ -6,6 +6,7 @@ spring:
     mongodb:
       host: localhost
       port: 27017
+      database: dev
   jackson:
     serialization:
       indent_output: true
